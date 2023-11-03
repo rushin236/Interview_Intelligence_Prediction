@@ -1,5 +1,5 @@
 from interviewIntelligence.constants import *
-from interviewIntelligence.entity import DataIngestionConfig
+from interviewIntelligence.entity import DataIngestionConfig, DataValidationConfig
 from interviewIntelligence.utils.common import create_directries, read_yaml
 
 
@@ -23,3 +23,15 @@ class ConfigurationManager:
         )
 
         return data_ingestion_config
+
+    def get_data_validation_config(self) -> DataValidationConfig:
+        config = self.config.data_validation
+
+        data_validation_config = DataValidationConfig(
+            root_dir=config.root_dir,
+            validation_dir=config.validation_dir,
+            valid_dirs=config.valid_dirs,
+            status_file_path=config.status_file_path,
+        )
+
+        return data_validation_config
