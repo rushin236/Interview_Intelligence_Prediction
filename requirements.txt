@@ -9,4 +9,5 @@ catboost
 PyYAML
 python-box
 Flask
+ensure
 -e .

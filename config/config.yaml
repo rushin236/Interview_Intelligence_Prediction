@@ -2,5 +2,12 @@ artifacts_root: artifacts
 
 data_ingestion:
   root_dir: artifacts/data_ingestion
-  source_URL: https://github.com/rushin236/Datasets/blob/main/Interview_Intelligence_Prediction/data_ingestion.zip
-  data_dir: ["train", "test", "submission"]
+  source_URL: https://github.com/rushin236/Datasets/raw/main/Interview_Intelligence_Prediction/data.zip
+  local_data_file: artifacts/data_ingestion/data.zip
+  unzip_dir: artifacts/data_ingestion
+
+data_validation:
+  root_dir: artifacts/data_validation
+  validation_dir: artifacts/data_ingestion
+  valid_dirs: ["train", "test", "sample"]
+  status_file_path: artifacts/data_validation/status.txt
