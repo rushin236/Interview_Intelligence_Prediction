@@ -13,7 +13,7 @@ try:
 except Exception as e:
     raise e
 
-STAGE_NAME = "data ingestion"
+STAGE_NAME = "data validation"
 try:
     logger.info(f">>>>> {STAGE_NAME} started <<<<<")
     data_ingestion = DataValidationPipeline()
